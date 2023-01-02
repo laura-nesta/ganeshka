@@ -1,9 +1,9 @@
 import { Button } from "@mui/material";
 import {TextField} from "@mui/material";
-import './connexion.css'
+import './inscription.css'
 
 
-export default function Connexion() {
+export default function Inscription() {
 
     return (
      <>
@@ -37,13 +37,22 @@ export default function Connexion() {
                                     sx={{ input: { color: '#FFFFFF80' }}}
                                 />
                             </div>
+                            <div class="input-text">
+                                <TextField 
+                                    id="outlined-basic" 
+                                    label="Cofirmation mot de passe" 
+                                    variant="outlined" 
+                                    inputProps={{className: "textfield_input"}} 
+                                    sx={{ input: { color: '#FFFFFF80' }}}
+                                />
+                            </div>
                         </div>
                         <div class="button-submit">
                             <Button 
                                 href="/"
                                 variant="outlined"
                                 inputProps={{className: "button"}}
-                            >Connexion</Button>
+                            >Inscription</Button>
                         </div>
                     </div>
                   </div>     

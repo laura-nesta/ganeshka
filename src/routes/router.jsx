@@ -7,6 +7,7 @@ import Agenda from './Agenda/Agenda';
 import Parametre from './Parametres/Parametres';
 import Tache from './Taches/Taches';
 import Connexion from './Connexion/Connexion';
+import Inscription from './Inscription/Inscription';
 
 import {
   createBrowserRouter,
@@ -27,10 +28,10 @@ export const Router = () =>{
             path: "agenda",
             element: <Agenda />,
           },
-          {
-            path: "parametre",
-            element: <Parametre />,
-          },
+        //   {
+        //     path: "parametre",
+        //     element: <Parametre />,
+        //   },
           {
             path: "tache",
             element: <Tache />,
@@ -38,6 +39,10 @@ export const Router = () =>{
           {
             path: "connexion",
             element: <Connexion />,
+          },
+          {
+            path: "inscription",
+            element: <Inscription />,
           },
       ]);
 

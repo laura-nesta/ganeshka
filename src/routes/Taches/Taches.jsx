@@ -38,6 +38,26 @@ export default function Tache() {
                         <p>Catégorie de la tâche</p>
                         <p>Difficulté de la tâche</p>
                     </div>
+                    <div class="card">
+                        <p>Nom de la tâche</p>
+                        <p>Catégorie de la tâche</p>
+                        <p>Difficulté de la tâche</p>
+                    </div>
+                    <div class="card">
+                        <p>Nom de la tâche</p>
+                        <p>Catégorie de la tâche</p>
+                        <p>Difficulté de la tâche</p>
+                    </div>
+                    <div class="card">
+                        <p>Nom de la tâche</p>
+                        <p>Catégorie de la tâche</p>
+                        <p>Difficulté de la tâche</p>
+                    </div>
+                    <div class="card">
+                        <p>Nom de la tâche</p>
+                        <p>Catégorie de la tâche</p>
+                        <p>Difficulté de la tâche</p>
+                    </div>
                 </div>
              </div>
 

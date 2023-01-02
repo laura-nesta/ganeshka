@@ -24,22 +24,24 @@
     position: fixed;
     width: 100%;
     padding: 5px;
+    z-index: 100;
 }
 
 .main-container{
     background-color: #444444;
-    height: 666px;
+    margin-bottom: 60px;
 }
 
 .container{
     padding: 5px;
     margin: auto;
-    text-align: center;
     background-color: #2d2d2d50;
     margin-top: 50px;
     border-radius: 5px;
     width: 90%;
     height: 80%;
+    padding-bottom: 20px;
+    min-height: 530px;
 }
 
 p{

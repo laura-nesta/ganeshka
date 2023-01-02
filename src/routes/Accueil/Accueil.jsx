@@ -35,9 +35,29 @@ const data = {
         backgroundColor: 'rgba(65, 243, 243, 0.2)',
         borderColor: 'rgba(65, 243, 243, 1)',
         borderWidth: 1,
+        fill: true,
+        legend:{
+            display: false,
+        },
       },
     ],
   };
+
+  const options = {
+    // legend: {
+    //     display: false,
+    //     labels: {
+    //         display: false
+    //     }
+    // }
+    plugins: {
+        legend: {
+            labels: {
+                color: '#49505700'
+            }
+        }
+    },
+};
 
     return (
       <>
@@ -49,7 +69,7 @@ const data = {
              <div class="main-container">
                 <div class="container">
                     <div class="container-chart">
-                    <Radar data={data} />
+                    <Radar data={data} options={options} />
                     </div>
                 </div>
              </div>

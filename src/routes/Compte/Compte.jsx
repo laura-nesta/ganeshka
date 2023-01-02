@@ -1,4 +1,5 @@
 import { BottomNavBar } from "../../components/atoms/BottomNavBar/BottomNavBar";
+import { Button } from "@mui/material";
 import './compte.css'
 import '../base.css'
 
@@ -17,7 +18,13 @@ export default function Compte() {
                         <h2>Age : </h2>
                         <h2>Surnom : </h2>
                         <h2>Sexe : </h2>
-                    <button>Déconnexion</button>
+                        <div class="button-submit">
+                            <Button 
+                                href="connexion"
+                                variant="outlined"
+                                inputProps={{className: "button"}}
+                            >Déonnexion</Button>
+                        </div>
                     </div>
                   </div>
      
