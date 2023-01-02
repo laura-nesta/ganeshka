@@ -1,14 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { ThemeProvider } from 'styled-components';
 import {getTheme} from './themes/default.js'
+import { Router } from './routes/router.jsx';
 
 function App() {
   return (
     <ThemeProvider theme={getTheme()}>
       <div className="App">
-        Ganeshka toolkit 
+        <Router id="root"></Router> 
       </div>
     </ThemeProvider>
   );

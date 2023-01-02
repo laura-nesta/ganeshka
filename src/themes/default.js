@@ -1,6 +1,6 @@
 export const getTheme = () => {
     return {
-        background:"",
+        background:"#444444",
         primary:"cyan",
         secondary:"",
         validate:"",
