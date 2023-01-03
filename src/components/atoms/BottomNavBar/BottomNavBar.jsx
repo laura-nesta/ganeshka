@@ -23,9 +23,9 @@ export const BottomNavBar = () => {
             }} 
             class="bottomNav">
                 {/* <BottomNavigationAction label="" href={`parametre`} icon={<img class="icone-menu" src={icone_parametres} alt="Réglages" />} /> */}
+                <BottomNavigationAction label="" href={`tache`} icon={<img class="icone-menu" src={icone_parametres} alt="A faire" />} />
                 <BottomNavigationAction label="" href={`/`} icon={<img class="icone-menu" src={icone_toile} alt="Compétences" />} />
-                <BottomNavigationAction label="" href={`tache`} icon={<img class="icone-menu" src={icone_done} alt="A faire" />} />
-                <BottomNavigationAction label="" href={`agenda`} icon={<img class="icone-menu" src={icone_agenda} alt="Agenda" />} />
+                <BottomNavigationAction label="" href={`agenda`} icon={<img class="icone-menu" src={icone_done} alt="Agenda" />} />
                 <BottomNavigationAction label="" href={`compte`} icon={<img class="icone-menu" src={icone_compte} alt="Compte" />}/>
             </BottomNavigation>
     </>

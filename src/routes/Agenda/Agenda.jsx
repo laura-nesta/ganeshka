@@ -48,7 +48,6 @@ export default function Agenda() {
     }, [frequence])
     function displayTaches(){
         const tacheFiltre = taches.filter(el => el.frequence === frequence)
-        console.log(tacheFiltre)
         setDisplayedTasks(tacheFiltre);
         // for (let i = 0; i < tacheFiltre.length; i++) {
         //     const element = tacheFiltre[i];
@@ -69,17 +68,21 @@ export default function Agenda() {
              <div className="main-container">
                 <div className="container">
                     <div className="menu-agenda">   
-                        {/* On filtre les tâche par fréquance */}
-                        <p  className="jour" onClick={() => setFrequence("jour")}>Jour</p>
-                        <p  className="semaine" onClick={() => setFrequence("semaine")}>Semaine</p>
-                        <p  className="mois" onClick={() => setFrequence("mois")}>Mois</p>
+                        {/* On filtre les tâche par fréquence */}
+                        <p  className={(frequence==="jour")? "jour active" : "jour"} onClick={() => setFrequence("jour")}>Jour</p>
+                        <p  className={(frequence==="semaine")? "semaine active" : "semaine"} onClick={() => setFrequence("semaine")}>Semaine</p>
+                        <p  className={(frequence==="mois")? "mois active" : "mois"} onClick={() => setFrequence("mois")}>Mois</p>
                     </div>
                     
                     <div className="taches-liste">
                         <div id="tache"> 
                             {displayedTasks.map((element, i) => {
-                                console.log(element)
-                                return <CardTache key={i} nom={element.nom} categorie={element.categorie} niveau={element.niveau}></CardTache>
+                                return <CardTache 
+                                    key={i + '_' + element.frequence} 
+                                    nom={element.nom} 
+                                    categorie={element.categorie} 
+                                    niveau={element.niveau}
+                                ></CardTache>
                             })} 
                         </div>
                     </div>

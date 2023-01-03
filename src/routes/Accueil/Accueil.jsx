@@ -27,37 +27,40 @@ ChartJS.register(
 export default function Accueil() {
 
 const data = {
-    labels: ['Social', 'Pro', 'Santé', 'Lecture', 'Sport', 'Thing 6'],
+    labels: ['Social', 'Pro', 'Santé', 'Lecture', 'Sport', 'Maison'],
     datasets: [
       {
-        label: '',
-        data: [2, 1, 7, 5, 2, 3, 10],
+        label: 'niveau',
+        data: [5, 8, 7, 5, 6, 4],
         backgroundColor: 'rgba(65, 243, 243, 0.2)',
         borderColor: 'rgba(65, 243, 243, 1)',
         borderWidth: 1,
-        fill: true,
-        legend:{
-            display: false,
-        },
       },
     ],
   };
 
   const options = {
-    // legend: {
-    //     display: false,
-    //     labels: {
-    //         display: false
-    //     }
-    // }
-    plugins: {
-        legend: {
-            labels: {
-                color: '#49505700'
-            }
-        }
+    scale: {
+      min: 0,
+      max: 10,
+      ticks: {
+            callback: function() {return ""},
+            backdropColor: "rgba(0, 0, 0, 0)"
+      }
     },
-};
+    scales: {
+      r: {
+        ticks: {
+          display: false // Hides the labels in the middel (numbers)
+        }
+      }
+    },
+    plugins:{
+      legend:{
+         display:false
+      }
+   }
+  };
 
     return (
       <>

@@ -1,12 +1,12 @@
 import './cardTache.css'
-
+import {useState} from 'react';
 export default function CardTache(props) {
-
-    // document.querySelector(".skill-level").classList.add("show-"+props.niveau)
-
+    const [done, isDone] = useState(false);
     const levelClass = "skill-level show-" + props.niveau
     return (
-     <div class="card">
+     <div onClick={() => {
+        isDone(!done)
+     }} className={done? "card done" : "card"}>
         <div class="info-tache">
             <p class="tache-nom">{props.nom}</p>
             <p class="tache-categorie">{props.categorie}</p>
@@ -20,5 +20,3 @@ export default function CardTache(props) {
     </div>
     );
   }
-  
-  

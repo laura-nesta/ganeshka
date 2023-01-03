@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import Accueil from './Accueil/Accueil';
 import Compte from './Compte/Compte';
 import Agenda from './Agenda/Agenda';
-import Parametre from './Parametres/Parametres';
+// import Parametre from './Parametres/Parametres';
 import Tache from './Taches/Taches';
 import Connexion from './Connexion/Connexion';
 import Inscription from './Inscription/Inscription';

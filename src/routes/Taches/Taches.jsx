@@ -10,6 +10,7 @@ import '../base.css'
 export default function Tache() {
 
     const [displayedTasks, setDisplayedTasks] = useState([]);
+    
     const taches=[
         {
             nom : "Laver le sol",
@@ -68,8 +69,12 @@ export default function Tache() {
                     <div class="tache-liste">
                         <div id="tache"> 
                             {displayedTasks.map((element, i) => {
-                                console.log(element)
-                                return <CardTache key={i} nom={element.nom} categorie={element.categorie} niveau={element.niveau}></CardTache>
+                                return <CardTache 
+                                        key={i + '_' + element.frequence } 
+                                        nom={element.nom} 
+                                        categorie={element.categorie} 
+                                        niveau={element.niveau} 
+                                        ></CardTache>
                             })} 
                         </div>
                     </div>
