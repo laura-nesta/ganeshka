@@ -22,19 +22,20 @@
 .skill-level {
     height: 1em;
     margin: 10px 0px;
-    min-width: 400px;
+    width: 100%;
+    /* min-width: 400px; */
   }
   .skill-level span {
-    background: linear-gradient(rgb(0, 153, 153),rgb(51, 241, 255),#093);
-    border-radius: 2px;
+    background: linear-gradient(rgb(0, 153, 153),rgb(51, 241, 255),rgb(3, 95, 97));
+    border-radius: 3px;
     border: 1px solid rgba(255,255,255,0.7);
-    width: 25px;
-    height: 8px;
+    width: 8%;
+    height: 5px;
     display: inline-block;
     margin: 0 1px;
   }
   .show-0 span:nth-child(n+1) {
-    background: white;
+    background: rgba(255, 255, 255, 0.6);
   }
   .show-1 span:nth-child(n+2) {
     background: white;

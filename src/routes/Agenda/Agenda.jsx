@@ -58,6 +58,54 @@ export default function Agenda() {
                                     </div>
                             </div>
                         </div>
+                        <div class="card">
+                            <div>
+                                <p class="tache-nom">Lire un chapitre</p>
+                                <p class="tache-categorie">Lecture</p>
+                            </div>
+                            <div class="difficulte">
+                                <p>Difficulté:</p>
+                                    <div class="skill-level show-2">
+                                        <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <p class="tache-nom">Lire un chapitre</p>
+                                <p class="tache-categorie">Lecture</p>
+                            </div>
+                            <div class="difficulte">
+                                <p>Difficulté:</p>
+                                    <div class="skill-level show-2">
+                                        <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <p class="tache-nom">Lire un chapitre</p>
+                                <p class="tache-categorie">Lecture</p>
+                            </div>
+                            <div class="difficulte">
+                                <p>Difficulté:</p>
+                                    <div class="skill-level show-2">
+                                        <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <p class="tache-nom">Lire un chapitre</p>
+                                <p class="tache-categorie">Lecture</p>
+                            </div>
+                            <div class="difficulte">
+                                <p>Difficulté:</p>
+                                    <div class="skill-level show-2">
+                                        <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
              </div>
