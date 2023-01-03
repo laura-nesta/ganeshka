@@ -1,5 +1,10 @@
 .card{
     padding: 5px;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #FFFFFF20;
+    border-radius: 5px 10%;
 }
 
 .tache-nom{
