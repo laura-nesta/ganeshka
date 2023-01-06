@@ -1,39 +1,116 @@
 import { BottomNavBar } from "../../components/atoms/BottomNavBar/BottomNavBar";
-import './accueil.css'
-import '../base.css'
+import "./accueil.css";
+import "../base.css";
+
+import React, { useState, useEffect } from "react";
+
+import { Button } from "@mui/material";
 
 import {
-    Chart as ChartJS,
-    RadialLinearScale,
-    PointElement,
-    LineElement,
-    Filler,
-    Tooltip,
-    Legend,
-  } from 'chart.js';
-import { Radar } from 'react-chartjs-2';
+  Chart as ChartJS,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Radar } from "react-chartjs-2";
 
 ChartJS.register(
-    RadialLinearScale,
-    PointElement,
-    LineElement,
-    Filler,
-    Tooltip,
-    Legend
-  );
-
-
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend
+);
 
 export default function Accueil() {
+  const [displayedTasks, setDisplayedTasks] = useState([]);
+  const [displayedLevel, setDisplayedLevel] = useState([]);
 
-const data = {
-    labels: ['Social', 'Pro', 'Santé', 'Lecture', 'Sport', 'Maison'],
+  const categories = [
+    {
+      id: 1,
+      nom: "Social",
+      niveau: 5,
+      userId: 1,
+    },
+    {
+      id: 2,
+      nom: "Pro",
+      niveau: 8,
+      userId: 1,
+    },
+    {
+      id: 3,
+      nom: "Santé",
+      niveau: 7,
+      userId: 1,
+    },
+    {
+      id: 4,
+      nom: "Lecture",
+      niveau: 5,
+      userId: 1,
+    },
+    {
+      id: 5,
+      nom: "Sport",
+      niveau: 6,
+      userId: 1,
+    },
+    {
+      id: 6,
+      nom: "Maison",
+      niveau: 4,
+      userId: 1,
+    },
+    {
+      id: 7,
+      nom: "Loisir",
+      niveau: 2,
+      userId: 2,
+    },
+    {
+      id: 7,
+      nom: "Bureau",
+      niveau: 8,
+      userId: 2,
+    },
+    {
+      id: 7,
+      nom: "Vie",
+      niveau: 4,
+      userId: 2,
+    },
+  ];
+
+  useEffect(() => {
+    displayLabels(1);
+  });
+
+  function displayLabels(userId) {
+    const tab = [];
+    const tabUser = categories.filter((el) => el.userId === userId);
+    tabUser.forEach((el) => tab.push(el.nom));
+    setDisplayedTasks(tab);
+
+    const tabLevel = [];
+    const tabFilter = categories.filter((el) => el.userId === userId);
+    tabFilter.forEach((el) => tabLevel.push(el.niveau));
+    setDisplayedLevel(tabLevel);
+  }
+
+  const data = {
+    labels: displayedTasks,
     datasets: [
       {
-        label: 'niveau',
-        data: [5, 8, 7, 5, 6, 4],
-        backgroundColor: 'rgba(65, 243, 243, 0.2)',
-        borderColor: 'rgba(65, 243, 243, 1)',
+        label: "niveau",
+        data: displayedLevel,
+        backgroundColor: "rgba(65, 243, 243, 0.2)",
+        borderColor: "rgba(65, 243, 243, 0.3)",
         borderWidth: 1,
       },
     ],
@@ -43,46 +120,59 @@ const data = {
     scale: {
       min: 0,
       max: 10,
-      ticks: {
-            callback: function() {return ""},
-            backdropColor: "rgba(0, 0, 0, 0)"
-      }
     },
     scales: {
       r: {
         ticks: {
-          display: false // Hides the labels in the middel (numbers)
-        }
-      }
+          display: false, // Hides the labels in the middel (numbers)
+        },
+        grid: {
+          color: "#FFFFFF30",
+        },
+        angleLines: {
+          color: "rgba(0, 153, 153, 0.5)",
+        },
+        pointLabels: {
+          color: "white",
+        },
+      },
     },
-    plugins:{
-      legend:{
-         display:false
-      }
-   }
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
   };
 
-    return (
-      <>
-      <div class = "page">
-            <div class="header">
-                 <h1 class="titre" >RPG Life</h1>
-             </div>
-
-             <div class="main-container">
-                <div class="container">
-                    <div class="container-chart">
-                    <Radar data={data} options={options} />
-                    </div>
-                </div>
-             </div>
-
-             <div class="nav-bar">
-                <BottomNavBar></BottomNavBar>
-             </div>
-
+  return (
+    <>
+      <div class="page">
+        <div class="header">
+          <h1 class="titre">RPG Life</h1>
         </div>
-        {/* <div id="sidebar">
+
+        <div class="main-container">
+          <div class="container">
+            <div class="container-chart">
+              <Radar data={data} options={options} />
+            </div>
+            <div class="add-categorie">
+              <Button
+                sx={{
+                  color: "rgb(0, 153, 153)",
+                }}
+              >
+                Nouvelle compétence +
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-bar">
+          <BottomNavBar></BottomNavBar>
+        </div>
+      </div>
+      {/* <div id="sidebar">
           <h1>React Router Contacts</h1>
           <div>
             <form id="search-form" role="search">
@@ -119,6 +209,6 @@ const data = {
           </nav>
         </div>
         <div id="detail"></div> */}
-      </>
-    );
-  }
+    </>
+  );
+}

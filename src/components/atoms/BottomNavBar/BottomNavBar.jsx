@@ -15,18 +15,47 @@ export const BottomNavBar = () => {
     return (
         <>
             <BottomNavigation  
-            sx={{ width: 300 }}
+            sx={{ width: 100}}
             // showLabels
             value={value}
             onChange={(event, newValue) => {
             setValue(newValue);
+            console.log(value)
             }} 
             class="bottomNav">
                 {/* <BottomNavigationAction label="" href={`parametre`} icon={<img class="icone-menu" src={icone_parametres} alt="Réglages" />} /> */}
-                <BottomNavigationAction label="" href={`tache`} icon={<img class="icone-menu" src={icone_parametres} alt="A faire" />} />
-                <BottomNavigationAction label="" href={`/`} icon={<img class="icone-menu" src={icone_toile} alt="Compétences" />} />
-                <BottomNavigationAction label="" href={`agenda`} icon={<img class="icone-menu" src={icone_done} alt="Agenda" />} />
-                <BottomNavigationAction label="" href={`compte`} icon={<img class="icone-menu" src={icone_compte} alt="Compte" />}/>
+                <BottomNavigationAction 
+                    label="" href={`tache`} 
+                    icon={<img 
+                        class={(window.location.pathname === '/tache')? "icone-menu active" : "icone-menu"} 
+                        src={icone_parametres} 
+                        alt="A faire" 
+                    />} 
+                />
+                <BottomNavigationAction 
+                    label="" href={`/`}
+                    icon={<img 
+                        class={(window.location.pathname === '/')? "icone-menu active" : "icone-menu"}
+                        src={icone_toile} 
+                        alt="Compétences" 
+                    />} 
+                />
+                <BottomNavigationAction 
+                    label="" href={`agenda`}
+                    icon={<img 
+                        class={(window.location.pathname === '/agenda')? "icone-menu active" : "icone-menu"}
+                        src={icone_done} 
+                        alt="Agenda" 
+                    />} 
+                />
+                <BottomNavigationAction 
+                    label="" href={`compte`}
+                    icon={<img 
+                        class={(window.location.pathname === '/compte')? "icone-menu active" : "icone-menu"}
+                        src={icone_compte} 
+                        alt="Compte" 
+                    />}
+                />
             </BottomNavigation>
     </>
     )
